@@ -1,26 +1,38 @@
 # Olex2 #
 
+Created 16.09.20 by **DGL**
+
+Modified 17.09.20 by **DGL**
+
+[Olex2 site](https://www.olexsys.org/)
+
+
+# Table of Content:
+
+
 <!-- vim-markdown-toc GFM -->
 
-* [Usage](#usage)
-* [CIF](#cif)
-* [Commands](#commands)
-	- [Bonding information](#bonding-information)
-	- [Molecule growing](#molecule-growing)
-	- [Names, labels](#names-labels)
-	- [Atom selection](#atom-selection)
-	- [Cell and symmetry](#cell-and-symmetry)
-* [Images](#images)
-* [Keybindings](#keybindings)
+1. [Usage](#usage)
+1. [CIF](#cif)
+1. [Commands](#commands)
+	1. [Bonding information](#bonding-information)
+	1. [Molecule growing](#molecule-growing)
+	1. [Names, labels](#names-labels)
+	1. [Atom selection](#atom-selection)
+	1. [Cell and symmetry](#cell-and-symmetry)
+1. [Images](#images)
+1. [Keybindings](#keybindings)
 
 <!-- vim-markdown-toc -->
 
 ## Usage ##
+[Table of Content](#table-of-content)
 
-Open *.res* file.
+Open *.res*, *.ins*, *.cif* files.
 
 
 ## CIF ##
+[Table of Content](#table-of-content)
 
 `twin` - search for twinning in centrosymentrical groups.
 
@@ -34,6 +46,7 @@ Open *.res* file.
 
 
 ## Commands ##
+[Table of Content](#table-of-content)
 
 ### Bonding information ###
 
@@ -80,21 +93,23 @@ included in *cif* file).
 
 ### Cell and symmetry ###
 
-cell - show/hide cell
+`cell` - show/hide cell
 
 
 ## Images ##
+[Table of Content](#table-of-content)
 
-`save model name` - generate *.oxm* file for image storage
+`save model name` - generate *.oxm* (*name.oxm*) file for image storage
 
 
 ## Keybindings ##
+[Table of Content](#table-of-content)
 
-**<F3>** - show/hide labels
+**\<F3\>** - show/hide labels
 
 **Ctrl+R** - refine structure
 
-**Ctrl+H* - toggle between show H, show H with internal h-bonds, hide H.
+**Ctrl+H** - toggle between show H, show H with internal h-bonds, hide H.
 
 **Ctrl+T** - toggle between show structure only, structure + text, only text.
 

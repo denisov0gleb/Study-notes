@@ -1,19 +1,24 @@
-# Shape2.1 #
+# Shape2.1 Guide #
+
+Created 16.09.20 by **DGL**
+
+Modified 17.09.20 by **DGL**
 
 Download free [Shape2.1 program](http://www.ee.ub.edu/index.php?option=com_jdownloads&view=viewcategories&Itemid=529)
 
+# Table of Content:
 <!-- vim-markdown-toc GFM -->
 
-* [Input file structure](#input-file-structure)
-	- [User defined reference shape](#user-defined-reference-shape)
-	- [Most popular chemical polyhedrons](#most-popular-chemical-polyhedrons)
-	- [Input examples](#input-examples)
-		+ [Example 1](#example-1)
-		+ [Example 2 with reference](#example-2-with-reference)
-* [Output file](#output-file)
-	- [Output examples](#output-examples)
-		+ [Example 1](#example-1-1)
-		+ [Example 2 with reference](#example-2-with-reference-1)
+1. [Input file structure](#input-file-structure)
+	1. [User defined reference shape](#user-defined-reference-shape)
+	1. [Most popular chemical polyhedrons](#most-popular-chemical-polyhedrons)
+	1. [Input examples](#input-examples)
+		1. [Example 1](#example-1)
+		1. [Example 2 with reference](#example-2-with-reference)
+1. [Output file](#output-file)
+	1. [Output examples](#output-examples)
+		1. [Example 1](#example-1-1)
+		1. [Example 2 with reference](#example-2-with-reference-1)
 
 <!-- vim-markdown-toc -->
 
@@ -60,6 +65,7 @@ The *.ref* file contains:
 
 
 ### Input examples ###
+[Table of Content](#table-of-content)
 
 #### Example 1 ####
 
@@ -134,9 +140,10 @@ C2v
 
 ## Output file ##
 
-**Shape** generate *.tab* file
+**Shape** generates *.tab* file
 
 ### Output examples ###
+[Table of Content](#table-of-content)
 
 #### Example 1 ####
 
