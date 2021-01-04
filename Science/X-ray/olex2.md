@@ -17,7 +17,8 @@ Modified 17.09.20 by **DGL**
 1. [Commands](#commands)
 	1. [Bonding information](#bonding-information)
 	1. [Molecule growing](#molecule-growing)
-	1. [Names, labels](#names-labels)
+	1. [Names](#names)
+	1. [Labels](#labels)
 	1. [Atom selection](#atom-selection)
 	1. [Cell and symmetry](#cell-and-symmetry)
 1. [Images](#images)
@@ -38,7 +39,9 @@ Open *.res*, *.ins*, *.cif* files.
 
 `basf 0.5` - **???**
 
-`isor value` - **???**
+`isor value` - **???** *value* >= 0.01
+
+`eadp` - **???** equal anis **???**
 
 `fvar` - link two or more atoms through a free variable (usually the chemical occupancy for different parts).
 
@@ -65,7 +68,7 @@ included in *cif* file).
 `compaq` - moves all atoms or fragments of the asymmetric unit as close to each other as possible.
 
 
-### Names, labels ###
+### Names ###
 
 `name type` - rename selected to the *type*
 
@@ -75,16 +78,26 @@ included in *cif* file).
 
 `Legend` - show/hide legend
 
-`labels` - show/hide labels
 
-`labels -p` - show/hide parts
+### Labels ###
 
 `showp value` - show only requested parts
+
+`labels` - show/hide labels
+
+| `labels -X` | Description        |
+| ---         | ---                |
+| -p          | Parts              |
+| -a          | Afixes             |
+| -h          | Hydrogens          |
+| -co         | Chemical occupancy |
+| -v          | Free variables     |
+
 
 
 ### Atom selection ###
 
-`envi r-2.7 atom` - print a list of atoms within a sphere of radius **r** around the atom (named or selected).
+`envi r=2.7 atom` - print a list of atoms within a sphere of radius **r** around the atom (named or selected).
 
 `-h` - including hydrogens
 
@@ -105,11 +118,9 @@ included in *cif* file).
 ## Keybindings ##
 [Table of Content](#table-of-content)
 
-**\<F3\>** - show/hide labels
-
-**Ctrl+R** - refine structure
-
-**Ctrl+H** - toggle between show H, show H with internal h-bonds, hide H.
-
-**Ctrl+T** - toggle between show structure only, structure + text, only text.
-
+| Keys       | Description                                                      |
+| ---        | ---                                                              |
+| **\<F3\>** | show/hide labels                                                 |
+| **Ctrl+R** | refine structure                                                 |
+| **Ctrl+H** | toggle between show H, show H with internal h-bonds, hide H.     |
+| **Ctrl+T** | toggle between show structure only, structure + text, only text. |

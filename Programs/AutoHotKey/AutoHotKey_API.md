@@ -2,33 +2,55 @@
 
 Based on [russian wiki](https://ahk-wiki.ru/)
 
+Created 16.09.20 by **DGL**
+
+Modified 17.09.20 by **DGL**
+
+# Table of Content:
 
 <!-- vim-markdown-toc GFM -->
 
-* [Language syntax](#language-syntax)
-	- [Variables](#variables)
-	- [Conditions](#conditions)
-	- [Loops](#loops)
-		+ [For](#for)
-		+ [While](#while)
-		+ [Break and Continue](#break-and-continue)
-	- [Functions](#functions)
-	- [Commands](#commands)
-	- [Run program or link](#run-program-or-link)
-* [GUI commands](#gui-commands)
-	- [Message Box](#message-box)
-	- [Icons](#icons)
-	- [Windows](#windows)
-* [Keys](#keys)
-	- [Keys code](#keys-code)
-	- [Keybinding](#keybinding)
-	- [Key emulation](#key-emulation)
-* [Autocorrect](#autocorrect)
-* [Code examples](#code-examples)
+1. [Make your script autorun when PC in on](#make-your-script-autorun-when-pc-in-on)
+1. [Language syntax](#language-syntax)
+	1. [Variables](#variables)
+		1. [Strings operations](#strings-operations)
+		1. [Special variables](#special-variables)
+	1. [Conditions](#conditions)
+	1. [Loops](#loops)
+		1. [For](#for)
+		1. [While](#while)
+		1. [Break and Continue](#break-and-continue)
+	1. [Functions](#functions)
+	1. [Commands](#commands)
+	1. [Run program or link](#run-program-or-link)
+1. [Files](#files)
+1. [GUI commands](#gui-commands)
+	1. [Special windows](#special-windows)
+		1. [Message Box](#message-box)
+		1. [Input Box](#input-box)
+		1. [Files windows](#files-windows)
+	1. [Icons](#icons)
+	1. [Windows](#windows)
+	1. [Mouse](#mouse)
+	1. [Colors](#colors)
+1. [Keys](#keys)
+	1. [Keys code](#keys-code)
+	1. [Keybinding](#keybinding)
+	1. [Key emulation](#key-emulation)
+1. [Autocorrect](#autocorrect)
+1. [Code examples](#code-examples)
 
 <!-- vim-markdown-toc -->
 
+## Make your script autorun when PC in on ##
+
+1. Copy your script (`Ctrl + c`)
+2. Open Run dialog (`Win + r`) and enter `shell:startup`
+3. Right mouse click and select *Paste ShortCut*
+
+
 ## Language syntax ##
+[Table of Content](#table-of-content)
 
 `; comment`
 
@@ -64,6 +86,23 @@ Get variable value:
 | Boolean		| **0** or **1** (**false** or **true**) | bool_val := true			 |
 | Numerical | any **integer** or **decimal**				 | numerical_val := 0		 |
 | Strings		| any **strings**												 | string := "your name" |
+
+#### Strings operations ####
+* contancation: `MyStr = %str1% %str2%`
+
+#### Special variables ####
+
+* Clipboard
+
+```AutoHotKey
+F7::MsgBox %clipboard%
+```
+
+* Program Files `%A_ProgramFiles%`
+
+* iterator `A_Index`
+
+
 
 ### Conditions ###
 
@@ -222,14 +261,65 @@ MsgBox, Notepad is closed{!}
 Return
 ```
 
+## Files ##
+
+Append to existing file or create a new one:
+
+`FileAppend, This text will be appended.\n, C:\My Documents\My Text File.txt`
+
+Delete file:
+
+`FileDelete, C:\My Documents\My Text File.txt`
+
+Main file commands:
+
+* `FileRead`
+* `IfExist`
+* `File-reading Loop`
+* `FileSelectFile`
+* `FileSelectFolder`
+* `FileCopy`
+* `FileMove`
+* `File Loop` search files or folders
+* `FileSetAttrib` change file attributes
+* `FileSetTime` change creation date
+* *.INI* files:
+	* `IniRead`
+	* `IniWrite`
+	* `IniDelete`
+* windows register files:
+	* `RegRead`
+	* `RegWrite`
+	* `RegDelete`
+	* `Register Loop`
+
+
+
+
+
 
 ## GUI commands ##
 
-### Message Box ###
+### Special windows ###
+
+#### Message Box ####
 
 ```AutoHotKey
 MsgBox, Some text on the Message Box
 ```
+
+`IfMsgBox, No, Return`
+
+#### Input Box ####
+
+```AutoHotKey
+InputBox,
+```
+
+#### Files windows ####
+* `FileSelectFile`
+* `FileSelectFolder`
+
 
 
 ### Icons ###
@@ -265,9 +355,31 @@ Main windows commands:
 * `WinMaximize`
 * `WinRestore`
 
+### Mouse ###
+
+Use *Window Spy* to get the Mouse position on current window (starts count from the left upper
+corner).
+
+Click the left mouse button on the current window position
+```AutoHotKey
+F7::MouseClick, Left, 112, 223
+```
+Main mouse commands:
+* `MouseMove`
+* `MouseClickDrag`
+
+
+### Colors ###
+
+Get color in the position (11;22)
+`PixelGetColor, Color, 11, 22`
+
+
 ## Keys ##
 
 ### Keys code ###
+
+[Keys codes] (https://www.autohotkey.com/docs/KeyList.htm)
 
 \# - *windows*
 \^ - *ctrl*
